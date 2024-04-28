@@ -1,0 +1,172 @@
+{
+    "en": {
+        "translation": {
+            "settings": {
+                "title": "Settings",
+                "language": {
+                    "title": "Language",
+                    "name": "English"
+                },
+                "theme": {
+                    "title": "Dark mode"
+                },
+                "limit": {
+                    "title": "Limit"
+                },
+                "currency": {
+                    "title": "Currency"
+                }
+            },
+            "header": {
+                "logo": {
+                    "name": "Crypto Tracker"
+                },
+                "links": {
+                    "home": "Home"
+                }
+            },
+            "assets": {
+                "table": {
+                    "header": {
+                        "rank": "Rank",
+                        "name": "Name",
+                        "price": "Price",
+                        "market": "Market Cap",
+                        "change24": "Change (24h)",
+                        "volume24": "Volume (24h)",
+                        "average24": "Average (24h)",
+                        "total-supply": "Total supply",
+                        "supply": "Supply"
+                    },
+                    "alert-error": {
+                        "title": "Error"
+                    }
+                },
+                "more": {
+                    "show": "Show more",
+                    "loading": "Loading..."
+                }
+            },
+            "asset": {
+                "card": {
+                    "rank": "Rank:",
+                    "price": "Price:",
+                    "market": "Market Cap:",
+                    "change24": "Change precent in 24h:",
+                    "volume24": "Trading volume in 24h:",
+                    "average24": "Average price in 24h:",
+                    "total-supply": "Total supply:",
+                    "supply": "Supply:"
+                },
+                "chart": {
+                    "nav": {
+                        "day": "Day",
+                        "week": "Week",
+                        "month": "Month",
+                        "3months": "3 months",
+                        "6months": "6 months",
+                        "year": "Year"
+                    }
+                }
+            },
+            "search": {
+                "title": "Search",
+                "placeholder": "For example: Bitcoin"
+            },
+            "footer": {
+                "support": "Support my work",
+                "follow": "Follow me",
+                "logo": {
+                    "name": "Crypto Tracker",
+                    "description": "Crypto Tracker is available as a website at CryptoTracker.net. No financial advice. Do your own research!"
+                },
+                "version": "Version:"
+            }
+        }
+    },
+    "uk": {
+        "translation": {
+            "settings": {
+                "title": "Налаштування",
+                "language": {
+                    "title": "Мова",
+                    "name": "Українська"
+                },
+                "theme": {
+                    "title": "Темний режим"
+                },
+                "limit": {
+                    "title": "Ліміт"
+                },
+                "currency": {
+                    "title": "Валюта"
+                }
+            },
+            "header": {
+                "logo": {
+                    "name": "Crypto Tracker"
+                },
+                "links": {
+                    "home": "Головна"
+                }
+            },
+            "assets": {
+                "table": {
+                    "header": {
+                        "rank": "Ранг",
+                        "name": "Назва",
+                        "price": "Ціна",
+                        "market": "Капітал",
+                        "change24": "Зміна (24г)",
+                        "volume24": "Обсяг торгів (24г)",
+                        "average24": "Середня ціна (24г)",
+                        "total-supply": "Загальна",
+                        "supply": "Доступно"
+                    },
+                    "alert-error": {
+                        "title": "Помилка"
+                    }
+                },
+                "more": {
+                    "show": "Показати ще",
+                    "loading": "Завантаження..."
+                }
+            },
+            "asset": {
+                "card": {
+                    "rank": "Ранг:",
+                    "price": "Ціна:",
+                    "market": "Капітал:",
+                    "change24": "Зміна у відсотках за 24 години:",
+                    "volume24": "Обсяг торгів за 24 години:",
+                    "average24": "Середня ціна за 24 години:",
+                    "total-supply": "Загальна кількість:",
+                    "supply": "Доступна кількість:"
+                },
+                "chart": {
+                    "nav": {
+                        "day": "День",
+                        "week": "Тиждень",
+                        "month": "Місяць",
+                        "3months": "3 місяці",
+                        "6months": "6 місяців",
+                        "year": "Рік"
+                    }
+                }
+            },
+            "search": {
+                "title": "Пошук",
+                "placeholder": "Наприклад: Bitcoin"
+            },
+            "footer": {
+                "support": "Підтримай мій проєкт",
+                "follow": "Слідкуйте у соціальніх мережах",
+                "logo": {
+                    "name": "Crypto Tracker",
+                    "description": "Crypto Tracker доступний як веб-сайт за адресою CryptoTracker.net. Ніяких фінансових порад. Проведіть власне дослідження!"
+                },
+                "version": "Версія:"
+            }
+        }
+    }
+}

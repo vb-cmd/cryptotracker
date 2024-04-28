@@ -1,0 +1,13 @@
+.scroll-navigation {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+
+    &--buttons {
+        background-color: var(--bs-tertiary-bg);
+        border-radius: 10px;
+        padding: 5px;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+    }
+}

@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Bitcoin",
+        "hash": "bc1qmw85lsv7vq6ae5ev2q6a3hdzqv2d5esfe3p5ue"
+    },
+    {
+        "name": "Ethereum",
+        "hash": "0x07Db926bF29a5F26C8db0833F2F4C692C877313F"
+    },
+    {
+        "name": "Dodgecoin",
+        "hash": "DRTzHxp3bfYQv7uFCHNPCAtv7YKFmmM1Bd"
+    },
+    {
+        "name": "Solana",
+        "hash": "3ger2y8VoNAHkFPui61TzS7xHZhWUSzMXX4pcnqD4hx1"
+    },
+    {
+        "name": "Toncoin",
+        "hash": "EQBFeV87MgcgnMym2qLciMgzK4Y0nut9Ct9HqmZjxcEEEupD"
+    },
+    {
+        "name": "Cardano",
+        "hash": "addr1q9x6yds5m443wmla4aqrwqhvlg4l94ldrxsrcer665f843xmfpd8h3kxcst05refnmv2ctncwmkqgt27gppq6u4mlhmqp9q2y7"
+    },
+    {
+        "name": "Avalanche",
+        "hash": "0x07Db926bF29a5F26C8db0833F2F4C692C877313F"
+    },
+    {
+        "name": "XRP",
+        "hash": "rrnzyWpw6FEM1keojKqvvMA9nWV3v1TpEJ"
+    }
+]
