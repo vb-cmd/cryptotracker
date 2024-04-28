@@ -6,11 +6,11 @@ const NAME_ATTRIBUTE = 'data-bs-theme'
 
 export default class ThemeService {
     static dark() {
-        this.#setTheme(NAME_DARK)
+        this.setTheme(NAME_DARK)
     }
 
     static light() {
-        this.#setTheme(NAME_LIGHT)
+        this.setTheme(NAME_LIGHT)
     }
 
     static get currentName() {
@@ -18,14 +18,14 @@ export default class ThemeService {
     }
 
     static setup() {
-        this.#setTheme(this.currentName || NAME_LIGHT)
+        this.setTheme(this.currentName || NAME_LIGHT)
     }
 
     static get isDefault() {
         return this.currentName === NAME_LIGHT
     }
 
-    static #setTheme(name) {
+    static setTheme(name) {
         document.documentElement.setAttribute(NAME_ATTRIBUTE, name);
         localStorage.setItem(NAME_KEY, name);
     }
