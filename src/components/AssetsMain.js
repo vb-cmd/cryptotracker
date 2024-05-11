@@ -1,13 +1,12 @@
-import ShowMore from '../components/ShowMore';
-import AssetsTable from '../components/AssetsTable';
+import ShowMore from './ShowMore';
+import AssetsTable from './AssetsTable';
 import AssetsService from "../service/AssetsService";
-import { Loading } from '../components/Loading';
+import { Loading } from './Loading';
 import { useEffect, useState, useContext } from "react";
 import LimitService from '../service/LimitService';
 import { humanReadable } from '../helper/stringHelper';
-import { ErrorMessage } from '../components/ErrorMessage';
-import { RateContext } from '../App';
-import { Helmet } from 'react-helmet';
+import { ErrorMessage } from './ErrorMessage';
+import { RateContext } from '../contexts/RateContext';
 
 export default function AssetsPage() {
   const { rate } = useContext(RateContext);
@@ -26,7 +25,6 @@ export default function AssetsPage() {
   }
 
   useEffect(() => {
-    document.title = `Coins - Crypto Tracker`
     setOffset(value => value + LimitService.current)
 
     fetchData(offset)
@@ -73,8 +71,6 @@ export default function AssetsPage() {
   }
 
   return (
-    <>
-      <Helmet><title>Crypto Tracker</title></Helmet>
       <div className="assets-page">
         <div className='middle-1400'>
           {isLoading && <Loading />}
@@ -83,7 +79,6 @@ export default function AssetsPage() {
         {assets && <AssetsTable assets={assets} />}
         <ShowMore handleFetch={handleFetchMore} />
       </div>
-    </>
   );
 }
 

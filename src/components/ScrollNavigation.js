@@ -16,7 +16,7 @@ export default function ScrollNavigation() {
 
     return (
         <div className="scroll-navigation">
-            <Stack direction="vertical" gap={2} className="scroll-navigation--buttons">
+            <Stack direction="vertical" gap={2} className="scroll-navigation-buttons">
                 {buttons.map((item) => {
                     return (
                         <Button

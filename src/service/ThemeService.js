@@ -30,5 +30,3 @@ export default class ThemeService {
         localStorage.setItem(NAME_KEY, name);
     }
 }
-
-ThemeService.setup()

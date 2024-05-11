@@ -12,8 +12,6 @@ export default class LimitService {
     }
 
     static setup() {
-        this.current = this.current
+        this.current = this.current || LIMIT_DEFAULT
     }
 }
-
-LimitService.setup()

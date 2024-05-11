@@ -1,16 +1,32 @@
-import { Form, Offcanvas, Stack, InputGroup } from 'react-bootstrap';
+import {
+    Form,
+    Offcanvas,
+    Stack,
+    InputGroup
+} from 'react-bootstrap';
 import ThemeService from '../service/ThemeService';
 import { useTranslation } from 'react-i18next';
 import LanguageService from '../service/LanguageService';
 import LimitService from '../service/LimitService';
 import RateService from '../service/RateService';
-import { useContext } from 'react';
-import { RateContext } from '../App';
+import {
+    useContext,
+    useEffect,
+    useState
+} from 'react';
+import { RateContext } from '../contexts/RateContext';
 
 export default function ModalSettings({ show, handleClose }) {
     const limitList = [10, 20, 50, 100]
     const [t, i18n] = useTranslation();
     const rateContext = useContext(RateContext);
+    const [cryptoList, setCryptoList] = useState([]);
+    const [fiatList, setFiatList] = useState([]);
+
+    useEffect(() => {
+        setCryptoList(rateContext.rates.filter((value) => value.type === 'crypto'))
+        setFiatList(rateContext.rates.filter((value) => value.type === 'fiat'))
+    }, [setCryptoList, setFiatList, rateContext])
 
     const handleChangeTheme = (element) => {
         element.target.checked ? ThemeService.dark() : ThemeService.light();
@@ -66,7 +82,12 @@ export default function ModalSettings({ show, handleClose }) {
                     <InputGroup className='flex-nowrap'>
                         <InputGroup.Text>{t('settings.currency.title')}</InputGroup.Text>
                         <Form.Select value={rateContext.rate.id} onChange={handleChangeRate}>
-                            {rateContext.rates.map((value) => <option key={value.id} value={value.id}>{value.fullName} ({value.shortName})</option>)}
+                            <optgroup label={t('settings.currency.group.crypto')}>
+                                {cryptoList.map((value) => <option key={value.id} value={value.id}>{value.fullName} ({value.shortName})</option>)}
+                            </optgroup>
+                            <optgroup label={t('settings.currency.group.fiat')}>
+                                {fiatList.map((value) => <option key={value.id} value={value.id}>{value.fullName} ({value.shortName})</option>)}
+                            </optgroup>
                         </Form.Select>
                     </InputGroup>
                 </Stack>

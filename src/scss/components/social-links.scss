@@ -9,26 +9,26 @@
 .social-links {
     padding: 5px;
 
-    &__email {
+    &-email {
         @include button-color(#7a7a7a, #9d9d9d);
     }
 
-    &__telegram {
+    &-telegram {
         @include button-color(#1e80ff, #5ba2ff);
     }
 
-    &__github {
+    &-github {
         @include button-color(#24292e, #47525d);
     }
 
-    &__twitter {
+    &-twitter {
         @include button-color(#326ada, #548ffc);
     }
 
-    &__email,
-    &__github,
-    &__telegram,
-    &__twitter {
+    &-email,
+    &-github,
+    &-telegram,
+    &-twitter {
         border: none !important;
     }
 }

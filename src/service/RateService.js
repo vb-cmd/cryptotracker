@@ -7,6 +7,10 @@ export default class RateService {
         return localStorage.getItem(NAME_KEY) || RATE_DEFAULT
     }
 
+    static setup() {
+        this.current = this.current || RATE_DEFAULT
+    }
+
     /**
      * @returns {Promise<Array<Rate>>}
      */
@@ -26,7 +30,7 @@ export default class RateService {
      * @param {string} id
      * @returns {Promise<Rate>} 
      */
-    static async fetchSingle(id) {
+    static async getSingle(id) {
         const response = await fetchRates(id)
 
         if (response.ok) {
@@ -37,7 +41,6 @@ export default class RateService {
             throw Error('Something went wrong or the item doesn\'t exist')
         }
     }
-
 }
 
 const NAME_KEY = 'rate'

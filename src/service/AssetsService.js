@@ -1,4 +1,8 @@
 export default class AssetsService {
+    static get totalItems() {
+        return 2200
+    }
+
     /**
      * @param {number} offset
      * @param {number} limit

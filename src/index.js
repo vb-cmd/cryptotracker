@@ -1,17 +1,14 @@
 import { React } from 'react';
-import { BrowserRouter } from 'react-router-dom';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import setupSettings from './setupSettings';
 import './scss/index.scss';
 
+setupSettings();
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-    <BrowserRouter>
-        <App />
-    </BrowserRouter>
-);
+root.render(<App />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

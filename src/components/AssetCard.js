@@ -2,7 +2,8 @@ import { ListGroup, Badge, Card, Stack, Image } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 import { humanReadable } from "../helper/stringHelper";
 import { useContext } from 'react';
-import { RateContext } from '../App';
+import { RateContext } from '../contexts/RateContext';
+import XCircle from '../img/x-circle.svg'
 
 export function AssetCard({ asset }) {
     const { rate } = useContext(RateContext);
@@ -14,7 +15,7 @@ export function AssetCard({ asset }) {
         <Card className='m-2'>
             <Card.Header>
                 <Stack direction="horizontal" gap={2}>
-                    <Image src={asset.image} width="70" thumbnail />
+                    <Image src={asset.image} width="70" thumbnail onError={(e) => { e.target.onerror = null; e.target.src = XCircle }} />
                     <Stack direction='vertical' className='p-2'>
                         <h1 className='text-uppercase text-center'>{asset.name} ({asset.symbol})</h1>
                         <Badge bg="success">{t('asset.card.rank')} {asset.rank}</Badge>

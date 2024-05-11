@@ -6,7 +6,7 @@ import { ErrorMessage } from './ErrorMessage';
 import { Loading } from './Loading';
 import '../scss/components/chart-line.scss';
 import { useTranslation } from 'react-i18next';
-import { RateContext } from '../App';
+import { RateContext } from '../contexts/RateContext';
 
 export function ChartLine({ asset }) {
     const { rate } = useContext(RateContext);
@@ -51,7 +51,7 @@ export function ChartLine({ asset }) {
         barChart.draw();
 
         return () => barChart.destroy();
-    }, [chartRef, assetHistory]);
+    }, [chartRef, assetHistory, rate, asset]);
 
     const handleFetchData = async (interval, start, end) => {
         await fetchHistory(asset.id, interval, start, end);
@@ -108,7 +108,7 @@ function NavigationDate({ handleFetchData }) {
             fill
             defaultActiveKey={defaultKey}
             onSelect={handleSelectedKey}
-            className='chart-line__nav'>
+            className='chart-line-nav'>
             {intervalKeys.map((item) => {
                 return (
                     <Nav.Item key={item}>

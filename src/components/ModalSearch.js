@@ -1,17 +1,16 @@
 import { Form, ListGroup, Badge, Modal } from 'react-bootstrap';
 import { useState } from 'react';
 import AssetsService from '../service/AssetsService';
-import { useHref } from 'react-router-dom';
 import { Loading } from './Loading';
 import { ErrorMessage } from './ErrorMessage';
 import { useTranslation } from 'react-i18next';
+import DetailedAsset from './DetailedAsset';
 
 export function ModalSearch({ show, handleClose }) {
     const { t } = useTranslation();
     const [searchResults, setSearchResults] = useState(null);
     const [errorMessage, setErrorMessage] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
-    const assetsHref = useHref('assets');
 
     const handleSearchAssets = (event) => {
         const value = event.target.value;
@@ -42,10 +41,15 @@ export function ModalSearch({ show, handleClose }) {
                 {isLoading && <Loading />}
                 <ListGroup as="ol" numbered>
                     {searchResults && searchResults.map((asset) => (
-                        <ListGroup.Item as="li" className="d-flex justify-content-between align-items-start">
+                        <ListGroup.Item
+                            as="li"
+                            key={asset.id}
+                            className="d-flex justify-content-between align-items-center">
                             <div className="ms-2 me-auto">
                                 <div className="fw-bold">
-                                    <a href={`${assetsHref}/${asset.id}`}>{asset.name}</a>
+                                    <DetailedAsset asset={asset} variant={'link'}>
+                                        {asset.name}
+                                    </DetailedAsset>
                                 </div>
                             </div>
                             <Badge bg="primary" pill>

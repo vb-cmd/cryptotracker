@@ -1,0 +1,92 @@
+{
+    "en": {
+        "translation": {
+            "settings": {
+                "title": "Settings",
+                "language": {
+                    "title": "Language",
+                    "name": "English"
+                },
+                "theme": {
+                    "title": "Dark mode"
+                },
+                "limit": {
+                    "title": "Limit"
+                },
+                "currency": {
+                    "title": "Currency",
+                    "group": {
+                        "crypto": "Cryptocurrency",
+                        "fiat": "Fiat currency"
+                    }
+                }
+            },
+            "header": {
+                "logo": {
+                    "name": "Crypto Tracker"
+                },
+                "links": {
+                    "home": "Home"
+                }
+            },
+            "assets": {
+                "table": {
+                    "header": {
+                        "rank": "Rank",
+                        "name": "Name",
+                        "price": "Price",
+                        "market": "Market Cap",
+                        "change24": "Change (24h)",
+                        "volume24": "Volume (24h)",
+                        "average24": "Average (24h)",
+                        "total-supply": "Total supply",
+                        "supply": "Supply"
+                    },
+                    "alert-error": {
+                        "title": "Error"
+                    }
+                },
+                "more": {
+                    "show": "Show more",
+                    "loading": "Loading..."
+                }
+            },
+            "asset": {
+                "title": "Detailed",
+                "card": {
+                    "rank": "Rank:",
+                    "price": "Price:",
+                    "market": "Market Cap:",
+                    "change24": "Change precent in 24h:",
+                    "volume24": "Trading volume in 24h:",
+                    "average24": "Average price in 24h:",
+                    "total-supply": "Total supply:",
+                    "supply": "Supply:"
+                },
+                "chart": {
+                    "nav": {
+                        "day": "Day",
+                        "week": "Week",
+                        "month": "Month",
+                        "3months": "3 months",
+                        "6months": "6 months",
+                        "year": "Year"
+                    }
+                }
+            },
+            "search": {
+                "title": "Search",
+                "placeholder": "For example: Bitcoin"
+            },
+            "footer": {
+                "support": "Support my work",
+                "follow": "Follow me",
+                "logo": {
+                    "name": "Crypto Tracker",
+                    "description": "Crypto Tracker is available as a website at CryptoTracker.net. No financial advice. Do your own research!"
+                },
+                "version": "Version:"
+            }
+        }
+    }
+}

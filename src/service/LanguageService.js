@@ -17,5 +17,3 @@ export default class LanguageService {
         i18n.changeLanguage(this.name)
     }
 }
-
-LanguageService.setup()
