@@ -21,7 +21,6 @@ import AssetsTable from './components/AssetsTable';
 import { Loading } from './components/Loading';
 import { ErrorMessage } from './components/ErrorMessage';
 
-
 export default function App() {
   const [rates, setRates] = useState([]);
   const [rate, setRate] = useState([]);
